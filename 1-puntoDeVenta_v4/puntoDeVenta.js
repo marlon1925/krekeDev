@@ -93,7 +93,7 @@ limpiar = function () {
     mostrarTextoEnCaja("lblSubtotal", 0.0)
     mostrarTextoEnCaja("lblValorIVA", 0.0)
     mostrarTextoEnCaja("lblTotal", 0.0)
-     mostrarTextoEnCaja("lblResumen", "")
+    mostrarTextoEnCaja("lblResumen", "")
 
 }
 /* SI TODO FUNCIONA, HACER UN PUSH */
