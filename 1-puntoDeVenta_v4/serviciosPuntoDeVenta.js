@@ -1,4 +1,4 @@
-calcularValorDescuento = function (monto, porcentajeDescuento) {
+calcularDescuento = function (monto, porcentajeDescuento) {
     let descuento;
 
     descuento = (monto * porcentajeDescuento) / 100;
