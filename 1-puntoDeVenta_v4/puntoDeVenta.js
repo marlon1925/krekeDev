@@ -43,6 +43,8 @@ calcularValorTotal = function () {
      */
     //8. Invocar a calcularIVA y lo que devuelve guardar en la variable valorIVA
     //   El IVA debe calcularse sobre el valor del subtotal menos el descuento
+    valorSubtotal = valorSubtotal - valorDescuento
+    valorIVA = calcularIVA(valorSubtotal);
     //9. Mostrar el resultado en el componente lblValorIVA    
     /*
             Caso de prueba: 
@@ -53,7 +55,9 @@ calcularValorTotal = function () {
                 IVA esperado: 5.832
             Si el caso de prueba es exitoso, hacer un commit
         */
+    mostrarTexto("lblValorIVA", valorIVA.toFixed(3))
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
+    valorTotal = calcularTotal(valorSubtotal, valorIVA);
     //11. Mostrar el resultado en el componente lblTotal
     /*
            Caso de prueba: 
@@ -64,12 +68,16 @@ calcularValorTotal = function () {
                Total esperado: 54.432
            Si el caso de prueba es exitoso, hacer un commit
        */
+    mostrarTexto("lblTotal", valorTotal.toFixed(3))
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
         Si funciona, hacer un commit
     */
+    let mensaje = "Valor a pagar por " + cantidad + " " + nombreProducto + " con " + porcentajeDescuento + "% de descuento: USD " + valorTotal
+    mostrarTexto("lblResumen", mensaje)
+
 
 }
 limpiar = function () {
@@ -78,5 +86,14 @@ limpiar = function () {
         Dejar todos los textos de los montos con el valor 0.0
         Si funciona, hacer un commit
      */
+    mostrarTextoEnCaja("txtProducto", "")
+    mostrarTextoEnCaja("txtCantidad", 0)
+    mostrarTextoEnCaja("txtPrecio", 0.0)
+    mostrarTextoEnCaja("txtPorcentajeDescuento", 0)
+    mostrarTextoEnCaja("lblSubtotal", 0.0)
+    mostrarTextoEnCaja("lblValorIVA", 0.0)
+    mostrarTextoEnCaja("lblTotal", 0.0)
+     mostrarTextoEnCaja("lblResumen", "")
+
 }
 /* SI TODO FUNCIONA, HACER UN PUSH */
