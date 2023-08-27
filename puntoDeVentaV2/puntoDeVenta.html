@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="utilitarios.js"></script>
+        <script src="puntoDeVenta.js"></script>
+        <script src="serviciosPuntodeVenta.js"></script>
+        <link href="estilos.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="principal">
+            <div class="logoEscuela">
+                <img src="../calculadora/imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+
+            <div class="contenido">
+                <div class="titulo">
+                    PUNTO DE VENTA
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        PRODUCTO
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtProducto"/>
+                        <div class="error" id="lblError1"></div>
+                    </div>
+                </div>
+               
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        CANTIDAD
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtCantidad"/>
+                        <div class="error" id="lblError2"></div>
+                    </div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                         PRECIO 
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtPrecio"/>
+                        <div class="error" id="lblError3"></div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="TOTAL"
+                         class="estiloBoton" onclick="calcularValorTotal();" />
+                         <input type="button" value="LIMPIAR" class="estiloBoton" 
+                         onclick="limpiar()"/>
+                    </div>
+                 </div>
+            </div>
+            <div class="areaResultado">
+                <div class="resultado">
+                    <div class="subtotal ">
+                        SUBTOTAL:
+                        <div id="lblSubtotal">
+                            0.0
+                        </div>
+                    </div>
+                    <div class="subtotal">
+                        DESCUENTO:
+                        <div id="lblDescuento">
+                            0.0
+                        </div>
+                    </div>
+                    <div class="subtotal">
+                        IVA 12%:
+                        <div id="lblValorIVA">
+                            0.0
+                        </div>
+                    </div>
+                    <div class="subtotal">
+                        TOTAL:
+                        <div id="lblTotal">
+                            0.0
+                        </div>
+                    </div>
+        
+        
+        
+                </div>
+            </div>
+        </div>
+    
+        <h3>ESTIMADO USUARIO:</h3>
+        <h3 id="lblResumen">0.0</h3>
+    
+    </body> 
+</html>
