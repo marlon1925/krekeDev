@@ -1,16 +1,20 @@
 function juego(seleccionado) {
     seleccionado = document.getElementById("usuario").value
-    let elemento = generarElemento();
-    let rutaC = generarRuta(elemento);
-    let rutaU = generarRuta(seleccionado);
+    let elementoC = generarElemento();
+    let elementoU = generarElemento(seleccionado)
+    let rutaC = generarRuta(elementoC);
+    let rutaU = generarRuta(elementoU);
     mostrarImagen("imgComputadora", rutaC);
     mostrarImagen("imgUsuario", rutaU);
-    let resultado = determinarGanador(elemento, seleccionado)
+    let resultado = determinarGanador(elementoC, seleccionado)
     if (resultado == 0) {
         mostrarTexto("resultado", "EMPATE")
-    }else if(resultado == 1){
+    }else{
+        mostrarTexto("resultado", "")
+    }
+    if(resultado == 1){
         mostrarTexto("resultado", "PERDISTE LA PARTIDA!!")
     }else{
-        mostrarTexto("resultado", "GANASTE LA PARTIDA!! ")
+        mostrarTexto("resultado", "")
     }
 }

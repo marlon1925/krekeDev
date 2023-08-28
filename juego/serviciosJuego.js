@@ -7,8 +7,12 @@ function obtenerAleatorio() {
     return numeroEntero + 1;
 }
 
-function generarElemento() {
-    let numero = obtenerAleatorio();
+function generarElemento(seleccionado) {
+    let numero
+    if(!isNaN(seleccionado)){
+         numero = seleccionado;
+    }
+     numero = obtenerAleatorio();
     let elemento;
     mostrarTextoEnCaja("computadora", numero)
     if (numero == 1) {
