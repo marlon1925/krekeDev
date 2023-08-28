@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <link rel="stylesheet" href="juego.css">
+    <script src="utilitarios.js"></script>
+    <script src="juego.js"></script>
+    <script src="serviciosJuego.js"></script>
+</head>
+<body>
+    <h1>JUEGA PIEDRA PAPEL O TIJERA</h1>
+    <div class="opciones">
+        <div class="computadora">
+            <h5> Computadora </h5>
+            <input type="text" id="computadora" disabled>
+            <img src="" id="imgComputadora" width="300px">
+        </div>
+        <div class="usuario">
+            <h5>Ingresa 1 = piedra, 2 = papel y 3 = tijera</h5>
+            <input type="text" id="usuario">
+            <img src="" id="imgUsuario" width="300px">
+        </div>
+    </div>
+    <input type="button" value="Probar" onclick="juego();">
+    <h1 id="resultado"></h1>
+</body>
+</html>
