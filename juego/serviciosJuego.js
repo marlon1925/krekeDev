@@ -4,17 +4,11 @@ function obtenerAleatorio() {
     let numeroRandom = aleatorio * 3;
     let numeroEntero = parseInt(numeroRandom);
     // console.log(numeroEntero + 1)
+    mostrarTextoEnCaja("computadora", (numeroEntero + 1))
     return numeroEntero + 1;
 }
 
-function generarElemento(seleccionado) {
-    let numero
-    if(!isNaN(seleccionado)){
-         numero = seleccionado;
-    }
-     numero = obtenerAleatorio();
-    let elemento;
-    mostrarTextoEnCaja("computadora", numero)
+function generarElemento(numero) {
     if (numero == 1) {
         elemento = "piedra";
     } else if (numero == 2) {
@@ -22,9 +16,9 @@ function generarElemento(seleccionado) {
     } else {
         elemento = "tijera";
     }
-
     return elemento;
 }
+
 
 function determinarGanador(eleccioJugador1, eleccioJugador2) {
     let resultado;
@@ -46,15 +40,19 @@ function determinarGanador(eleccioJugador1, eleccioJugador2) {
     } else if (eleccioJugador1 === "piedra" && eleccioJugador2 === "tijera") {
         resultado = 1;
     }
+    return resultado
 }
 
 function generarRuta (nombre){
     let ruta;
     if(nombre === "tijera"){
         ruta = "./image/tijera.png"
-    }else if(nombre === "piedra"){
+    }
+    if(nombre === "piedra"){
         ruta = "./image/piedra.png"
-    }else{
+    }
+    if(nombre === "papel"){
         ruta = "./image/papel.png"
     }
+    return ruta
 }
