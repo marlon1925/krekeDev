@@ -10,6 +10,7 @@ esMayuscula = function (caracter) {
         return true;
     } else {
         return false;
+        console.log(first)
     }
 }
 guardarPalabra = function () {
